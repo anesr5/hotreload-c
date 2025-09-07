@@ -66,13 +66,6 @@ static char* log_default_path(void) {
 }
 
 
-
-
-
-
-
-
-// ---- API --------------------------------------------------------------------
 static inline void log_set_level(log_level_t lvl) { g_log.min_level = (int)lvl; }
 static inline void log_set_console(FILE* f)       { g_log.console = f ? f : stdout; g_log.use_color = isatty(fileno(g_log.console)); }
 static inline void log_set_color(int enable)      { g_log.use_color = enable; }
